@@ -1,18 +1,18 @@
 # Project Name = QRcode Generator
 # Developed By B SAI SANNIDH
 
-from tkinter import *
+from tkinter import *       # importing modules
 from tkinter import messagebox
 import qrcode
 
-def qr():
+def qr():    # Defining qr function
     data = text.get()
     qrc = qrcode.make(data)
     loc = location.get() + "\\" + name.get()
     qrc.save(f'{loc}.png')
     messagebox.showinfo("QR CODE GENERATOR", "Qr code is successfully generated")
 
-wn = Tk()
+wn = Tk() # Main Window
 wn.title("QRCodeGenerator")
 wn.geometry('1280x720')
 wn.config(bg="grey")
